@@ -1,16 +1,20 @@
 ---
----
 
 <section class="contact" id="contact">
   <div class="container">
     <div class="contact__inner">
       <div class="contact__info">
         <span class="section-tag">Get In Touch</span>
-        <h2 class="section-title">Ready for your<br/><em>pup's best walks?</em></h2>
+
+        <h2 class="section-title">
+          Ready for your<br />
+          <em>pup's best walks?</em>
+        </h2>
+
         <p class="contact__desc">
-  Fill out the form and we’ll get back to you within 24 hours. 🐾  
-  We service Five Dock, Wareemba, and surrounding areas.
-</p>
+          Fill out the form and we’ll get back to you within 24 hours. 🐾
+          We service Five Dock, Wareemba, and surrounding areas.
+        </p>
 
         <div class="contact__details">
           <a href="mailto:ingoodpaws1@gmail.com" class="contact__item">
@@ -20,6 +24,7 @@
               <p>ingoodpaws1@gmail.com</p>
             </div>
           </a>
+
           <div class="contact__item">
             <span class="contact__item-icon">📍</span>
             <div>
@@ -27,11 +32,12 @@
               <p>Five Dock, Wareemba & surrounds!</p>
             </div>
           </div>
+
           <div class="contact__item">
             <span class="contact__item-icon">🕐</span>
             <div>
               <strong>Hours</strong>
-              <p>Mon–Fri, 8am – 5pm<br/>Weekends for long care</p>
+              <p>Mon–Fri, 8am – 5pm<br />Weekends for long care</p>
             </div>
           </div>
         </div>
@@ -40,6 +46,7 @@
           <a href="https://instagram.com" target="_blank" rel="noopener" class="social-btn">
             📸 Follow us on Instagram
           </a>
+
           <a href="https://facebook.com" target="_blank" rel="noopener" class="social-btn">
             👍 Find us on Facebook
           </a>
@@ -48,9 +55,10 @@
 
       <div class="contact__form-wrap">
         <form class="contact__form" id="contactForm" action="https://formsubmit.co/ingoodpaws1@gmail.com" method="POST">
-<input type="hidden" name="_subject" value="New enquiry from In Good Paws website" />
-<input type="hidden" name="_captcha" value="false" />
-<input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_subject" value="New enquiry from In Good Paws website" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_template" value="table" />
+
           <h3 class="form__title">Send an enquiry 🐾</h3>
 
           <div class="form__row">
@@ -58,6 +66,7 @@
               <label for="name">Your name</label>
               <input type="text" id="name" name="name" placeholder="Jane Smith" required />
             </div>
+
             <div class="form__field">
               <label for="email">Email address</label>
               <input type="email" id="email" name="email" placeholder="jane@email.com" required />
@@ -69,9 +78,10 @@
               <label for="phone">Phone number</label>
               <input type="tel" id="phone" name="phone" placeholder="0400 000 000" />
             </div>
+
             <div class="form__field">
               <label for="suburb">Suburb</label>
-              <input type="text" id="suburb" name="suburb" placeholder="Newtown" />
+              <input type="text" id="suburb" name="suburb" placeholder="Five Dock" />
             </div>
           </div>
 
@@ -84,13 +94,23 @@
             <label for="service">Service interested in</label>
             <select id="service" name="service">
               <option value="">Select a service...</option>
-              <option>Solo Walk (30 min)</option>
-              <option>Solo Walk (60 min)</option>
+              <option>Private Walk</option>
               <option>Group Walk</option>
-              <option>Drop-In Visit</option>
-              <option>Overnight Sitting</option>
               <option>Day Sitting</option>
-              <option>Holiday Care</option>
+              <option>Drop-In Visit</option>
+              <option>Pet Sitting</option>
+            </select>
+          </div>
+
+          <div class="form__field">
+            <label for="duration">How long do you need care for?</label>
+            <select id="duration" name="duration">
+              <option value="">Select a duration...</option>
+              <option>30 mins</option>
+              <option>60 mins</option>
+              <option>Half day</option>
+              <option>Full day</option>
+              <option>1+ days</option>
             </select>
           </div>
 
@@ -122,8 +142,14 @@
     align-items: start;
   }
 
-  .contact__info .section-tag { margin-bottom: 16px; }
-  .contact__info .section-title { text-align: left; margin-bottom: 16px; }
+  .contact__info .section-tag {
+    margin-bottom: 16px;
+  }
+
+  .contact__info .section-title {
+    text-align: left;
+    margin-bottom: 16px;
+  }
 
   .contact__desc {
     color: var(--text-muted);
@@ -147,11 +173,16 @@
     border: 1.5px solid var(--sand);
     border-radius: var(--radius-md);
     transition: border-color 0.2s;
+    text-decoration: none;
   }
 
-  a.contact__item:hover { border-color: var(--bark); }
+  a.contact__item:hover {
+    border-color: var(--bark);
+  }
 
-  .contact__item-icon { font-size: 1.3rem; }
+  .contact__item-icon {
+    font-size: 1.3rem;
+  }
 
   .contact__item strong {
     display: block;
@@ -165,6 +196,7 @@
     font-size: 0.9rem;
     font-weight: 500;
     color: var(--bark-dark);
+    margin: 0;
   }
 
   .contact__social {
@@ -181,6 +213,7 @@
     color: var(--text-muted);
     transition: all 0.2s;
     font-weight: 500;
+    text-decoration: none;
   }
 
   .social-btn:hover {
@@ -188,7 +221,6 @@
     color: var(--bark-dark);
   }
 
-  /* Form */
   .contact__form-wrap {
     background: var(--warm-white);
     border: 2px solid var(--sand);
@@ -246,7 +278,10 @@
   }
 
   .form__field input::placeholder,
-  .form__field textarea::placeholder { color: var(--text-muted); opacity: 0.6; }
+  .form__field textarea::placeholder {
+    color: var(--text-muted);
+    opacity: 0.6;
+  }
 
   .form__submit {
     width: 100%;
@@ -274,14 +309,31 @@
       gap: 48px;
     }
 
-    .contact__info .section-title { text-align: center; }
-    .contact__desc { text-align: center; }
-    .contact__social { justify-content: center; }
+    .contact__info .section-title {
+      text-align: center;
+    }
+
+    .contact__desc {
+      text-align: center;
+    }
+
+    .contact__social {
+      justify-content: center;
+    }
   }
 
   @media (max-width: 500px) {
-    .form__row { grid-template-columns: 1fr; }
-    .contact__details { grid-template-columns: 1fr; }
-    .contact__form-wrap { padding: 24px; }
+    .form__row {
+      grid-template-columns: 1fr;
+    }
+
+    .contact__details {
+      grid-template-columns: 1fr;
+    }
+
+    .contact__form-wrap {
+      padding: 24px;
+    }
   }
 </style>
+```
