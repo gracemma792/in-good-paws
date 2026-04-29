@@ -1,0 +1,187 @@
+---
+const base = import.meta.env.BASE_URL;
+const navLinks = [
+  { href: '#services', label: 'Services' },
+  { href: '#about', label: 'About' },
+  { href: '#testimonials', label: 'Reviews' },
+  { href: '#contact', label: 'Contact' },
+];
+---
+
+<nav class="nav" id="nav">
+  <div class="container nav__inner">
+    <a href={base} class="nav__logo">
+      <span class="nav__paw">🐾</span>
+      <span class="nav__brand">In Good Paws</span>
+    </a>
+
+    <ul class="nav__links">
+      {navLinks.map(link => (
+        <li><a href={link.href} class="nav__link">{link.label}</a></li>
+      ))}
+    </ul>
+
+    <a href="#contact" class="nav__cta">Book a Walk</a>
+
+    <button class="nav__burger" id="burger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <div class="nav__mobile" id="mobileMenu">
+    <ul>
+      {navLinks.map(link => (
+        <li><a href={link.href} class="nav__mobile-link">{link.label}</a></li>
+      ))}
+      <li><a href="#contact" class="nav__mobile-cta">Book a Walk</a></li>
+    </ul>
+  </div>
+</nav>
+
+<style>
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    transition: background 0.3s, box-shadow 0.3s;
+  }
+
+  .nav.scrolled {
+    background: rgba(250, 246, 239, 0.95);
+    backdrop-filter: blur(12px);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .nav__inner {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    height: 72px;
+  }
+
+  .nav__logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--bark-dark);
+    letter-spacing: -0.02em;
+  }
+
+  .nav__paw {
+    font-size: 1.5rem;
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .nav__links {
+    display: flex;
+    list-style: none;
+    gap: 8px;
+    margin-left: auto;
+  }
+
+  .nav__link {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    padding: 8px 16px;
+    border-radius: var(--radius-pill);
+    transition: color 0.2s, background 0.2s;
+  }
+
+  .nav__link:hover {
+    color: var(--bark-dark);
+    background: var(--sand);
+  }
+
+  .nav__cta {
+    font-size: 0.875rem;
+    font-weight: 500;
+    background: var(--bark);
+    color: var(--cream);
+    padding: 10px 22px;
+    border-radius: var(--radius-pill);
+    transition: background 0.2s, transform 0.2s;
+    white-space: nowrap;
+  }
+
+  .nav__cta:hover {
+    background: var(--bark-dark);
+    transform: translateY(-1px);
+  }
+
+  .nav__burger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    margin-left: auto;
+  }
+
+  .nav__burger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--bark-dark);
+    border-radius: 2px;
+    transition: transform 0.3s;
+  }
+
+  .nav__mobile {
+    display: none;
+    background: var(--warm-white);
+    padding: 16px 24px 24px;
+    border-bottom: 1px solid var(--sand);
+  }
+
+  .nav__mobile ul { list-style: none; }
+
+  .nav__mobile-link {
+    display: block;
+    padding: 12px 0;
+    font-size: 1.1rem;
+    color: var(--text);
+    border-bottom: 1px solid var(--sand);
+  }
+
+  .nav__mobile-cta {
+    display: inline-block;
+    margin-top: 16px;
+    background: var(--bark);
+    color: var(--cream);
+    padding: 12px 28px;
+    border-radius: var(--radius-pill);
+    font-weight: 500;
+  }
+
+  @media (max-width: 768px) {
+    .nav__links, .nav__cta { display: none; }
+    .nav__burger { display: flex; }
+    .nav__mobile.open { display: block; }
+  }
+</style>
+
+<script>
+  const nav = document.getElementById('nav')!;
+  const burger = document.getElementById('burger')!;
+  const menu = document.getElementById('mobileMenu')!;
+
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 20);
+  });
+
+  burger.addEventListener('click', () => {
+    menu.classList.toggle('open');
+  });
+
+  menu.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => menu.classList.remove('open'));
+  });
+</script>

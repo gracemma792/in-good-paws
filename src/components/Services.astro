@@ -1,0 +1,243 @@
+---
+const services = [
+  {
+    icon: '🦮',
+    title: 'Solo Walks',
+    desc: 'One-on-one 30 or 60 minute walks tailored entirely to your dog. Full attention, personalised routes.',
+    price: 'From $35',
+    highlight: true,
+  },
+  {
+    icon: '🐕‍🦺',
+    title: 'Group Walks',
+    desc: 'Socialise your pup with up to 4 dogs on a fun group outing. Great for social butterflies.',
+    price: 'From $22',
+    highlight: false,
+  },
+  {
+    icon: '🏡',
+    title: 'Drop-In Visits',
+    desc: '30-minute home check-ins for feeding, play, and some love when you\'re at work.',
+    price: 'From $28',
+    highlight: false,
+  },
+  {
+    icon: '🌙',
+    title: 'Overnight Sitting',
+    desc: 'We stay at your home so your dog sleeps in their own bed, happy and comfortable.',
+    price: 'From $85',
+    highlight: false,
+  },
+  {
+    icon: '🎒',
+    title: 'Puppy Package',
+    desc: 'Lunchtime visits + afternoon walks for pups who need extra attention and toilet breaks.',
+    price: 'From $50',
+    highlight: false,
+  },
+  {
+    icon: '✈️',
+    title: 'Holiday Care',
+    desc: 'Extended pet-sitting while you travel. Full daily updates with photos and videos.',
+    price: 'From $65 /day',
+    highlight: false,
+  },
+];
+---
+
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">What We Offer</span>
+      <h2 class="section-title">Services built around<br/><em>your dog's needs</em></h2>
+      <p class="section-subtitle">Every service comes with real-time GPS updates, photo reports, and our signature care.</p>
+    </div>
+
+    <div class="services__grid">
+      {services.map(s => (
+        <div class={`service-card ${s.highlight ? 'service-card--highlight' : ''}`}>
+          <div class="service-card__icon">{s.icon}</div>
+          <h3 class="service-card__title">{s.title}</h3>
+          <p class="service-card__desc">{s.desc}</p>
+          <div class="service-card__footer">
+            <span class="service-card__price">{s.price}</span>
+            <a href="#contact" class="service-card__link">Book →</a>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div class="services__note">
+      <span>🐾</span>
+      <p>All services include a free meet & greet before your first booking. No lock-in contracts.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .services {
+    padding: 100px 0;
+    background: var(--warm-white);
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  .section-tag {
+    display: inline-block;
+    background: var(--moss-light);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 6px 16px;
+    border-radius: var(--radius-pill);
+    margin-bottom: 16px;
+  }
+
+  .section-title {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: var(--bark-dark);
+    line-height: 1.2;
+    margin-bottom: 16px;
+    letter-spacing: -0.02em;
+  }
+
+  .section-title em {
+    color: var(--moss);
+    font-style: italic;
+  }
+
+  .section-subtitle {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .services__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+
+  .service-card {
+    background: var(--cream);
+    border: 2px solid var(--sand);
+    border-radius: var(--radius-md);
+    padding: 32px 28px;
+    transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+  }
+
+  .service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--bark);
+  }
+
+  .service-card--highlight {
+    background: var(--bark-dark);
+    border-color: var(--bark-dark);
+    color: var(--cream);
+  }
+
+  .service-card--highlight .service-card__desc {
+    color: rgba(250,246,239,0.75);
+  }
+
+  .service-card--highlight .service-card__price {
+    color: #F5C842;
+  }
+
+  .service-card--highlight .service-card__link {
+    color: var(--cream);
+    border-color: rgba(255,255,255,0.3);
+  }
+
+  .service-card--highlight:hover {
+    border-color: var(--bark-dark);
+    box-shadow: 0 8px 40px rgba(61, 43, 31, 0.4);
+  }
+
+  .service-card__icon {
+    font-size: 2.2rem;
+    margin-bottom: 16px;
+  }
+
+  .service-card__title {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: -0.01em;
+  }
+
+  .service-card__desc {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 24px;
+  }
+
+  .service-card__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 16px;
+    border-top: 1px solid var(--sand);
+  }
+
+  .service-card--highlight .service-card__footer {
+    border-color: rgba(255,255,255,0.15);
+  }
+
+  .service-card__price {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--moss);
+  }
+
+  .service-card__link {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--bark);
+    padding: 6px 14px;
+    border: 1.5px solid var(--sand);
+    border-radius: var(--radius-pill);
+    transition: all 0.2s;
+  }
+
+  .service-card__link:hover {
+    background: var(--bark);
+    color: white;
+    border-color: var(--bark);
+  }
+
+  .services__note {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background: var(--sand);
+    border-radius: var(--radius-md);
+    padding: 20px 32px;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+  }
+
+  .services__note span { font-size: 1.2rem; }
+
+  @media (max-width: 900px) {
+    .services__grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 600px) {
+    .services__grid { grid-template-columns: 1fr; }
+  }
+</style>

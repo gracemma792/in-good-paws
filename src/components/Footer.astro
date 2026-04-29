@@ -1,0 +1,126 @@
+---
+---
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <a href="/" class="footer__logo">🐾 In Good Paws</a>
+      <p>Sydney's most caring dog walking service. Your dog is family — we treat them that way.</p>
+      <p class="footer__abn">ABN: 00 000 000 000 · Insured & Police Checked</p>
+    </div>
+
+    <div class="footer__links">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#services">Solo Walks</a></li>
+        <li><a href="#services">Group Walks</a></li>
+        <li><a href="#services">Drop-In Visits</a></li>
+        <li><a href="#services">Overnight Sitting</a></li>
+        <li><a href="#services">Holiday Care</a></li>
+      </ul>
+    </div>
+
+    <div class="footer__links">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#contact">Book Now</a></li>
+      </ul>
+    </div>
+
+    <div class="footer__links">
+      <h4>Follow Along</h4>
+      <ul>
+        <li><a href="https://instagram.com" target="_blank" rel="noopener">📸 Instagram</a></li>
+        <li><a href="https://facebook.com" target="_blank" rel="noopener">👍 Facebook</a></li>
+        <li><a href="mailto:hello@ingoodpaws.com.au">✉️ Email Us</a></li>
+        <li><a href="tel:+610400000000">📞 0400 000 000</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer__bottom">
+    <div class="container">
+      <p>© {new Date().getFullYear()} In Good Paws. All rights reserved. Made with 🐾 in Sydney.</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background: var(--bark-dark);
+    color: var(--cream);
+    padding: 64px 0 0;
+  }
+
+  .footer__inner {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 48px;
+    padding-bottom: 48px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .footer__logo {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  .footer__brand p {
+    font-size: 0.88rem;
+    color: rgba(250,246,239,0.65);
+    line-height: 1.6;
+    max-width: 260px;
+    margin-bottom: 8px;
+  }
+
+  .footer__abn {
+    font-size: 0.75rem !important;
+    opacity: 0.45 !important;
+  }
+
+  .footer__links h4 {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    opacity: 0.5;
+    margin-bottom: 16px;
+    font-weight: 600;
+  }
+
+  .footer__links ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer__links a {
+    font-size: 0.9rem;
+    color: rgba(250,246,239,0.75);
+    transition: color 0.2s;
+  }
+
+  .footer__links a:hover { color: white; }
+
+  .footer__bottom {
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.8rem;
+    color: rgba(250,246,239,0.4);
+  }
+
+  @media (max-width: 900px) {
+    .footer__inner { grid-template-columns: 1fr 1fr; }
+    .footer__brand { grid-column: 1 / -1; }
+  }
+
+  @media (max-width: 500px) {
+    .footer__inner { grid-template-columns: 1fr; }
+  }
+</style>

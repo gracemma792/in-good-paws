@@ -1,0 +1,221 @@
+---
+const features = [
+  { icon: '📍', title: 'Live GPS Tracking', desc: 'Follow every walk in real time via our app.' },
+  { icon: '📸', title: 'Photo & Video Updates', desc: 'Adorable updates sent straight to your phone.' },
+  { icon: '🔐', title: 'Fully Insured', desc: 'Covered by comprehensive pet care insurance.' },
+  { icon: '🎓', title: 'Trained & Certified', desc: 'Pet first aid certified and experience with all breeds.' },
+  { icon: '✅', title: 'Police Checked', desc: 'All our walkers pass a national police check.' },
+  { icon: '💬', title: '24/7 Communication', desc: 'Always reachable before, during, and after your booking.' },
+];
+---
+
+<section class="about" id="about">
+  <div class="container about__inner">
+    <div class="about__visual">
+      <div class="about__image-wrap">
+        <div class="about__img-placeholder">
+          <!-- Illustrated walker scene -->
+          <svg viewBox="0 0 340 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="340" height="420" rx="24" fill="#E8DDD0"/>
+            <!-- Path/ground -->
+            <path d="M0 300 Q85 280 170 295 Q255 310 340 290 L340 420 L0 420 Z" fill="#7A9B6E" opacity="0.5"/>
+            <path d="M0 320 Q85 300 170 315 Q255 330 340 310 L340 420 L0 420 Z" fill="#4A6741" opacity="0.5"/>
+            <!-- Trees -->
+            <circle cx="60" cy="200" r="40" fill="#4A6741" opacity="0.7"/>
+            <rect x="53" y="220" width="14" height="80" fill="#6B4C35"/>
+            <circle cx="280" cy="180" r="35" fill="#4A6741" opacity="0.7"/>
+            <rect x="273" y="200" width="14" height="80" fill="#6B4C35"/>
+            <!-- Walker -->
+            <!-- Body -->
+            <rect x="148" y="200" width="44" height="70" rx="20" fill="#FAF6EF"/>
+            <!-- Head -->
+            <circle cx="170" cy="185" r="28" fill="#D4A57A"/>
+            <!-- Hair -->
+            <path d="M145 175 Q155 150 170 155 Q185 150 195 175" fill="#3D2B1F"/>
+            <!-- Eyes smile -->
+            <path d="M160 183 Q163 187 166 183" stroke="#2A1F18" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <path d="M174 183 Q177 187 180 183" stroke="#2A1F18" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <!-- Legs -->
+            <rect x="150" y="265" width="18" height="60" rx="9" fill="#C8A882"/>
+            <rect x="172" y="265" width="18" height="60" rx="9" fill="#C8A882"/>
+            <!-- Shoes -->
+            <rect x="146" y="318" width="26" height="14" rx="7" fill="#3D2B1F"/>
+            <rect x="168" y="318" width="26" height="14" rx="7" fill="#3D2B1F"/>
+            <!-- Leash arm -->
+            <path d="M192 230 Q230 210 250 230" stroke="#FAF6EF" stroke-width="10" stroke-linecap="round" fill="none"/>
+            <!-- Leash line -->
+            <path d="M250 228 Q260 260 240 290" stroke="#3D2B1F" stroke-width="3" fill="none" stroke-dasharray="6 4" stroke-linecap="round"/>
+            <!-- Dog (small) -->
+            <ellipse cx="235" cy="305" rx="28" ry="22" fill="#B8835B"/>
+            <circle cx="240" cy="285" r="20" fill="#C8946B"/>
+            <!-- Dog ears -->
+            <ellipse cx="225" cy="278" rx="9" ry="14" fill="#A0714F" transform="rotate(-10 225 278)"/>
+            <ellipse cx="255" cy="278" rx="9" ry="14" fill="#A0714F" transform="rotate(10 255 278)"/>
+            <!-- Dog eyes -->
+            <circle cx="235" cy="283" r="4" fill="#2A1F18"/>
+            <circle cx="247" cy="283" r="4" fill="#2A1F18"/>
+            <circle cx="236" cy="282" r="1.5" fill="white"/>
+            <circle cx="248" cy="282" r="1.5" fill="white"/>
+            <!-- Tag: IGP -->
+            <rect x="148" y="218" width="44" height="22" rx="11" fill="#4A6741"/>
+            <text x="170" y="232" font-size="9" fill="white" text-anchor="middle" font-family="sans-serif" font-weight="bold">IN GOOD PAWS</text>
+          </svg>
+        </div>
+        <div class="about__years">
+          <strong>3+</strong>
+          <span>years of happy walks</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="about__content">
+      <span class="section-tag">About Us</span>
+      <h2 class="section-title">We treat every dog<br/><em>like our own</em></h2>
+      <p class="about__lead">
+        Hi! We're a small team of passionate dog lovers based in Sydney. 
+        In Good Paws was founded on one simple belief: every dog deserves 
+        attentive, joyful care — whether it's a quick lunchtime walk or a whole week of sitting.
+      </p>
+      <p class="about__body">
+        We take limited bookings so your dog always gets our full attention. 
+        We're not a big agency — we're real people who genuinely love dogs, 
+        and we'll send you more photos than you probably need. 🐾
+      </p>
+
+      <div class="about__features">
+        {features.map(f => (
+          <div class="feature">
+            <div class="feature__icon">{f.icon}</div>
+            <div>
+              <strong class="feature__title">{f.title}</strong>
+              <p class="feature__desc">{f.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about {
+    padding: 100px 0;
+    background: var(--cream);
+  }
+
+  .about__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+
+  .about__visual {
+    position: relative;
+  }
+
+  .about__image-wrap {
+    position: relative;
+  }
+
+  .about__img-placeholder {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+  }
+
+  .about__img-placeholder svg {
+    width: 100%;
+    height: auto;
+  }
+
+  .about__years {
+    position: absolute;
+    bottom: -16px;
+    right: -16px;
+    background: var(--moss);
+    color: white;
+    padding: 20px 24px;
+    border-radius: var(--radius-md);
+    text-align: center;
+    box-shadow: var(--shadow-md);
+  }
+
+  .about__years strong {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 2.2rem;
+    line-height: 1;
+  }
+
+  .about__years span {
+    font-size: 0.8rem;
+    opacity: 0.85;
+  }
+
+  .about__content .section-tag {
+    margin-bottom: 16px;
+  }
+
+  .about__content .section-title {
+    text-align: left;
+    margin-bottom: 20px;
+  }
+
+  .about__lead {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: var(--text);
+    margin-bottom: 16px;
+  }
+
+  .about__body {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 36px;
+  }
+
+  .about__features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .feature {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+  }
+
+  .feature__icon {
+    font-size: 1.4rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .feature__title {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--bark-dark);
+    margin-bottom: 4px;
+  }
+
+  .feature__desc {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+
+  @media (max-width: 900px) {
+    .about__inner {
+      grid-template-columns: 1fr;
+      gap: 48px;
+    }
+
+    .about__content .section-title { text-align: center; }
+    .about__lead, .about__body { text-align: center; }
+    .about__features { grid-template-columns: 1fr; }
+  }
+</style>

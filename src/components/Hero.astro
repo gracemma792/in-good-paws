@@ -1,0 +1,398 @@
+---
+---
+
+<section class="hero">
+  <!-- Background blobs -->
+  <div class="hero__blob hero__blob--1"></div>
+  <div class="hero__blob hero__blob--2"></div>
+
+  <div class="container hero__inner">
+    <div class="hero__content">
+      <div class="hero__badge">🐾 Sydney's Most Trusted Dog Walkers</div>
+      <h1 class="hero__title">
+        Every walk is a<br/>
+        <em>tail-wagging</em><br/>
+        adventure
+      </h1>
+      <p class="hero__desc">
+        Professional, loving dog walking and pet care across Sydney. 
+        Because your pup deserves the absolute best while you're away.
+      </p>
+      <div class="hero__actions">
+        <a href="#contact" class="btn btn--primary">Book a Walk Today</a>
+        <a href="#services" class="btn btn--ghost">See Our Services</a>
+      </div>
+      <div class="hero__stats">
+        <div class="stat">
+          <strong>500+</strong>
+          <span>Happy pups</span>
+        </div>
+        <div class="stat__divider"></div>
+        <div class="stat">
+          <strong>5★</strong>
+          <span>Avg. rating</span>
+        </div>
+        <div class="stat__divider"></div>
+        <div class="stat">
+          <strong>3 yrs</strong>
+          <span>Experience</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__visual">
+      <div class="hero__card hero__card--main">
+        <div class="hero__illustration">
+          <svg viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg" class="dog-svg">
+            <!-- Sky & ground -->
+            <rect width="320" height="320" rx="24" fill="#C8DDE8"/>
+            <ellipse cx="160" cy="310" rx="160" ry="60" fill="#7A9B6E" opacity="0.6"/>
+            <ellipse cx="160" cy="300" rx="140" ry="40" fill="#4A6741" opacity="0.4"/>
+            <!-- Sun -->
+            <circle cx="260" cy="60" r="30" fill="#F5C842" opacity="0.9"/>
+            <circle cx="260" cy="60" r="22" fill="#FAD85A"/>
+            <!-- Clouds -->
+            <ellipse cx="80" cy="80" rx="40" ry="18" fill="white" opacity="0.8"/>
+            <ellipse cx="105" cy="72" rx="28" ry="18" fill="white" opacity="0.8"/>
+            <ellipse cx="55" cy="75" rx="20" ry="14" fill="white" opacity="0.8"/>
+            <!-- Dog body -->
+            <ellipse cx="160" cy="210" rx="55" ry="45" fill="#A0714F"/>
+            <!-- Dog head -->
+            <circle cx="160" cy="155" r="42" fill="#B8835B"/>
+            <!-- Ears -->
+            <ellipse cx="124" cy="140" rx="18" ry="28" fill="#8B6040" transform="rotate(-15 124 140)"/>
+            <ellipse cx="196" cy="140" rx="18" ry="28" fill="#8B6040" transform="rotate(15 196 140)"/>
+            <!-- Eyes -->
+            <circle cx="147" cy="150" r="8" fill="#2A1F18"/>
+            <circle cx="173" cy="150" r="8" fill="#2A1F18"/>
+            <circle cx="149" cy="148" r="2.5" fill="white"/>
+            <circle cx="175" cy="148" r="2.5" fill="white"/>
+            <!-- Nose -->
+            <ellipse cx="160" cy="166" rx="9" ry="6" fill="#2A1F18"/>
+            <!-- Mouth -->
+            <path d="M152 172 Q160 180 168 172" stroke="#2A1F18" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <!-- Tongue -->
+            <ellipse cx="160" cy="178" rx="8" ry="10" fill="#E87E7E"/>
+            <!-- Legs -->
+            <rect x="118" y="248" width="20" height="38" rx="10" fill="#A0714F"/>
+            <rect x="182" y="248" width="20" height="38" rx="10" fill="#A0714F"/>
+            <rect x="105" y="240" width="18" height="32" rx="9" fill="#8B6040"/>
+            <rect x="197" y="240" width="18" height="32" rx="9" fill="#8B6040"/>
+            <!-- Tail -->
+            <path d="M212 215 Q240 190 230 170 Q220 150 235 145" stroke="#8B6040" stroke-width="14" fill="none" stroke-linecap="round" class="tail"/>
+            <!-- Collar -->
+            <rect x="130" y="188" width="60" height="12" rx="6" fill="#4A6741"/>
+            <circle cx="160" cy="194" r="5" fill="#F5C842"/>
+            <!-- Leash -->
+            <path d="M215 194 Q270 180 275 220" stroke="#3D2B1F" stroke-width="3" fill="none" stroke-linecap="round" stroke-dasharray="6 4"/>
+            <!-- Paw prints on ground -->
+            <circle cx="90" cy="285" r="5" fill="#4A6741" opacity="0.5"/>
+            <circle cx="82" cy="277" r="3" fill="#4A6741" opacity="0.5"/>
+            <circle cx="91" cy="275" r="3" fill="#4A6741" opacity="0.5"/>
+            <circle cx="99" cy="278" r="3" fill="#4A6741" opacity="0.5"/>
+            <circle cx="230" cy="288" r="5" fill="#4A6741" opacity="0.5"/>
+            <circle cx="222" cy="280" r="3" fill="#4A6741" opacity="0.5"/>
+            <circle cx="231" cy="278" r="3" fill="#4A6741" opacity="0.5"/>
+            <circle cx="239" cy="281" r="3" fill="#4A6741" opacity="0.5"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="hero__card hero__card--badge">
+        <span>🏆</span>
+        <div>
+          <strong>Fully Insured</strong>
+          <p>& Police Checked</p>
+        </div>
+      </div>
+
+      <div class="hero__card hero__card--ping">
+        <div class="ping"></div>
+        <span>Live GPS tracking on every walk</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero__scroll">
+    <span>Scroll to explore</span>
+    <div class="scroll-arrow">↓</div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    padding: 100px 0 60px;
+  }
+
+  .hero__blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.35;
+    pointer-events: none;
+  }
+
+  .hero__blob--1 {
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, #C8DDE8, transparent);
+    top: -200px; right: -200px;
+  }
+
+  .hero__blob--2 {
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, #E8DDD0, transparent);
+    bottom: -100px; left: -100px;
+  }
+
+  .hero__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+
+  .hero__content {
+    animation: fadeUp 0.8s ease both;
+  }
+
+  .hero__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--sand);
+    color: var(--bark-dark);
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 8px 18px;
+    border-radius: var(--radius-pill);
+    margin-bottom: 28px;
+    animation: fadeUp 0.8s ease 0.1s both;
+  }
+
+  .hero__title {
+    font-family: var(--font-display);
+    font-size: clamp(2.8rem, 5vw, 4.2rem);
+    line-height: 1.1;
+    color: var(--bark-dark);
+    letter-spacing: -0.02em;
+    margin-bottom: 20px;
+    animation: fadeUp 0.8s ease 0.15s both;
+  }
+
+  .hero__title em {
+    color: var(--moss);
+    font-style: italic;
+  }
+
+  .hero__desc {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    max-width: 440px;
+    margin-bottom: 36px;
+    animation: fadeUp 0.8s ease 0.2s both;
+  }
+
+  .hero__actions {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    animation: fadeUp 0.8s ease 0.25s both;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 14px 28px;
+    border-radius: var(--radius-pill);
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: all 0.2s;
+  }
+
+  .btn--primary {
+    background: var(--bark);
+    color: var(--cream);
+  }
+
+  .btn--primary:hover {
+    background: var(--bark-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(107, 76, 53, 0.35);
+  }
+
+  .btn--ghost {
+    border: 2px solid var(--sand);
+    color: var(--text);
+  }
+
+  .btn--ghost:hover {
+    background: var(--sand);
+    transform: translateY(-2px);
+  }
+
+  .hero__stats {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    animation: fadeUp 0.8s ease 0.3s both;
+  }
+
+  .stat strong {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    color: var(--bark-dark);
+  }
+
+  .stat span {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+  }
+
+  .stat__divider {
+    width: 1px;
+    height: 36px;
+    background: var(--sand);
+  }
+
+  /* Visual side */
+  .hero__visual {
+    position: relative;
+    height: 480px;
+    animation: fadeIn 1s ease 0.4s both;
+  }
+
+  .hero__card {
+    position: absolute;
+    background: var(--warm-white);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+  }
+
+  .hero__card--main {
+    width: 340px;
+    height: 360px;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: hidden;
+    border-radius: var(--radius-lg);
+    animation: float 5s ease-in-out infinite;
+  }
+
+  .dog-svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .tail {
+    transform-origin: 212px 215px;
+    animation: wagTail 0.6s ease-in-out infinite;
+  }
+
+  .hero__card--badge {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 20px;
+    left: -20px;
+    bottom: 80px;
+    font-size: 1.4rem;
+  }
+
+  .hero__card--badge strong {
+    font-size: 0.9rem;
+    color: var(--bark-dark);
+  }
+
+  .hero__card--badge p {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin: 0;
+  }
+
+  .hero__card--ping {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 18px;
+    right: -10px;
+    top: 20px;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    font-weight: 500;
+  }
+
+  .ping {
+    width: 10px; height: 10px;
+    background: #4CAF50;
+    border-radius: 50%;
+    position: relative;
+    flex-shrink: 0;
+  }
+
+  .ping::after {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    border-radius: 50%;
+    background: #4CAF50;
+    opacity: 0.3;
+    animation: pulse 1.5s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 0.3; }
+    50% { transform: scale(1.8); opacity: 0; }
+  }
+
+  .hero__scroll {
+    position: absolute;
+    bottom: 28px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    animation: fadeIn 1s ease 1s both;
+  }
+
+  .scroll-arrow {
+    animation: float 2s ease-in-out infinite;
+  }
+
+  @media (max-width: 900px) {
+    .hero__inner {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+
+    .hero__desc { margin: 0 auto 36px; }
+    .hero__actions { justify-content: center; }
+    .hero__stats { justify-content: center; }
+
+    .hero__visual {
+      height: 380px;
+      order: -1;
+    }
+
+    .hero__card--main {
+      width: 280px;
+      height: 300px;
+    }
+
+    .hero__card--badge { left: 0; }
+    .hero__card--ping { right: 0; }
+  }
+</style>

@@ -1,0 +1,305 @@
+---
+---
+
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="contact__inner">
+      <div class="contact__info">
+        <span class="section-tag">Get In Touch</span>
+        <h2 class="section-title">Ready for your<br/><em>pup's best walks?</em></h2>
+        <p class="contact__desc">
+          Drop us a message and we'll get back to you within a few hours. 
+          All new clients get a free meet & greet before their first booking.
+        </p>
+
+        <div class="contact__details">
+          <a href="tel:+610400000000" class="contact__item">
+            <span class="contact__item-icon">📞</span>
+            <div>
+              <strong>Give us a call</strong>
+              <p>0400 000 000</p>
+            </div>
+          </a>
+          <a href="mailto:hello@ingoodpaws.com.au" class="contact__item">
+            <span class="contact__item-icon">✉️</span>
+            <div>
+              <strong>Email us</strong>
+              <p>hello@ingoodpaws.com.au</p>
+            </div>
+          </a>
+          <div class="contact__item">
+            <span class="contact__item-icon">📍</span>
+            <div>
+              <strong>Service area</strong>
+              <p>Inner Sydney & surrounds</p>
+            </div>
+          </div>
+          <div class="contact__item">
+            <span class="contact__item-icon">🕐</span>
+            <div>
+              <strong>Hours</strong>
+              <p>Mon–Sun, 7am – 7pm</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact__social">
+          <a href="https://instagram.com" target="_blank" rel="noopener" class="social-btn">
+            📸 Follow us on Instagram
+          </a>
+          <a href="https://facebook.com" target="_blank" rel="noopener" class="social-btn">
+            👍 Find us on Facebook
+          </a>
+        </div>
+      </div>
+
+      <div class="contact__form-wrap">
+        <form class="contact__form" id="contactForm" novalidate>
+          <h3 class="form__title">Book a free meet & greet</h3>
+
+          <div class="form__row">
+            <div class="form__field">
+              <label for="name">Your name</label>
+              <input type="text" id="name" name="name" placeholder="Jane Smith" required />
+            </div>
+            <div class="form__field">
+              <label for="email">Email address</label>
+              <input type="email" id="email" name="email" placeholder="jane@email.com" required />
+            </div>
+          </div>
+
+          <div class="form__row">
+            <div class="form__field">
+              <label for="phone">Phone number</label>
+              <input type="tel" id="phone" name="phone" placeholder="0400 000 000" />
+            </div>
+            <div class="form__field">
+              <label for="suburb">Suburb</label>
+              <input type="text" id="suburb" name="suburb" placeholder="Newtown" />
+            </div>
+          </div>
+
+          <div class="form__field">
+            <label for="dog">Tell us about your dog</label>
+            <input type="text" id="dog" name="dog" placeholder="Name, breed, age..." />
+          </div>
+
+          <div class="form__field">
+            <label for="service">Service interested in</label>
+            <select id="service" name="service">
+              <option value="">Select a service...</option>
+              <option>Solo Walk (30 min)</option>
+              <option>Solo Walk (60 min)</option>
+              <option>Group Walk</option>
+              <option>Drop-In Visit</option>
+              <option>Overnight Sitting</option>
+              <option>Puppy Package</option>
+              <option>Holiday Care</option>
+            </select>
+          </div>
+
+          <div class="form__field">
+            <label for="message">Anything else we should know?</label>
+            <textarea id="message" name="message" rows="3" placeholder="Special needs, schedule preferences, questions..."></textarea>
+          </div>
+
+          <button type="submit" class="form__submit">
+            <span class="submit__text">Send Enquiry 🐾</span>
+            <span class="submit__success" hidden>Sent! We'll be in touch soon ✨</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .contact {
+    padding: 100px 0;
+    background: var(--cream);
+  }
+
+  .contact__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+
+  .contact__info .section-tag { margin-bottom: 16px; }
+  .contact__info .section-title { text-align: left; margin-bottom: 16px; }
+
+  .contact__desc {
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 36px;
+  }
+
+  .contact__details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 28px;
+  }
+
+  .contact__item {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    padding: 16px;
+    background: var(--warm-white);
+    border: 1.5px solid var(--sand);
+    border-radius: var(--radius-md);
+    transition: border-color 0.2s;
+  }
+
+  a.contact__item:hover { border-color: var(--bark); }
+
+  .contact__item-icon { font-size: 1.3rem; }
+
+  .contact__item strong {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    font-weight: 500;
+    margin-bottom: 2px;
+  }
+
+  .contact__item p {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--bark-dark);
+  }
+
+  .contact__social {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .social-btn {
+    font-size: 0.85rem;
+    padding: 10px 18px;
+    border: 1.5px solid var(--sand);
+    border-radius: var(--radius-pill);
+    color: var(--text-muted);
+    transition: all 0.2s;
+    font-weight: 500;
+  }
+
+  .social-btn:hover {
+    background: var(--sand);
+    color: var(--bark-dark);
+  }
+
+  /* Form */
+  .contact__form-wrap {
+    background: var(--warm-white);
+    border: 2px solid var(--sand);
+    border-radius: var(--radius-lg);
+    padding: 40px;
+    box-shadow: var(--shadow-soft);
+  }
+
+  .form__title {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    color: var(--bark-dark);
+    margin-bottom: 28px;
+  }
+
+  .form__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .form__field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 16px;
+  }
+
+  .form__field label {
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: var(--text-muted);
+  }
+
+  .form__field input,
+  .form__field select,
+  .form__field textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1.5px solid var(--sand);
+    border-radius: var(--radius-sm);
+    background: var(--cream);
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    color: var(--text);
+    transition: border-color 0.2s;
+    outline: none;
+    resize: vertical;
+  }
+
+  .form__field input:focus,
+  .form__field select:focus,
+  .form__field textarea:focus {
+    border-color: var(--moss);
+  }
+
+  .form__field input::placeholder,
+  .form__field textarea::placeholder { color: var(--text-muted); opacity: 0.6; }
+
+  .form__submit {
+    width: 100%;
+    padding: 15px;
+    background: var(--moss);
+    color: white;
+    border: none;
+    border-radius: var(--radius-pill);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    margin-top: 8px;
+  }
+
+  .form__submit:hover {
+    background: var(--bark);
+    transform: translateY(-2px);
+  }
+
+  @media (max-width: 900px) {
+    .contact__inner {
+      grid-template-columns: 1fr;
+      gap: 48px;
+    }
+
+    .contact__info .section-title { text-align: center; }
+    .contact__desc { text-align: center; }
+    .contact__social { justify-content: center; }
+  }
+
+  @media (max-width: 500px) {
+    .form__row { grid-template-columns: 1fr; }
+    .contact__details { grid-template-columns: 1fr; }
+    .contact__form-wrap { padding: 24px; }
+  }
+</style>
+
+<script>
+  const form = document.getElementById('contactForm') as HTMLFormElement;
+  form?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const btn = form.querySelector('.form__submit') as HTMLButtonElement;
+    const text = form.querySelector('.submit__text') as HTMLElement;
+    const success = form.querySelector('.submit__success') as HTMLElement;
+    btn.disabled = true;
+    text.hidden = true;
+    success.hidden = false;
+    btn.style.background = '#4A6741';
+  });
+</script>
