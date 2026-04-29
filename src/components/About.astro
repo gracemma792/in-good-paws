@@ -1,3 +1,6 @@
+Of course — here’s the whole updated About section with the four feature blocks turned into soft neutral bubbles, each with a slightly different colour and a gentle hover movement.
+
+```astro
 ---
 const features = [
   { icon: '🐾', title: 'Small & Personal', desc: 'We keep bookings limited so every dog gets our full attention.' },
@@ -130,34 +133,78 @@ const carouselPhotos = [
   .about__features {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    gap: 18px;
+    margin-top: 8px;
   }
 
   .feature {
+    position: relative;
     display: flex;
     gap: 14px;
     align-items: flex-start;
     text-align: left;
+    padding: 20px 18px;
+    border-radius: 28px;
+    border: 1.5px solid rgba(92, 72, 58, 0.08);
+    box-shadow: 0 14px 34px rgba(92, 72, 58, 0.08);
+    transition:
+      transform 0.22s ease,
+      box-shadow 0.22s ease,
+      border-color 0.22s ease;
+  }
+
+  .feature:nth-child(1) {
+    background: #f5eadf;
+  }
+
+  .feature:nth-child(2) {
+    background: #efe7d7;
+  }
+
+  .feature:nth-child(3) {
+    background: #f2dfd6;
+  }
+
+  .feature:nth-child(4) {
+    background: #e8eadf;
+  }
+
+  .feature:hover {
+    transform: translateY(-6px) rotate(-0.4deg);
+    box-shadow: 0 20px 44px rgba(92, 72, 58, 0.14);
+    border-color: rgba(92, 72, 58, 0.16);
+  }
+
+  .feature:nth-child(even):hover {
+    transform: translateY(-6px) rotate(0.4deg);
   }
 
   .feature__icon {
-    font-size: 1.4rem;
+    display: grid;
+    place-items: center;
+    width: 38px;
+    height: 38px;
     flex-shrink: 0;
-    margin-top: 2px;
+    margin-top: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.58);
+    font-size: 1.25rem;
+    box-shadow: inset 0 0 0 1px rgba(92, 72, 58, 0.06);
   }
 
   .feature__title {
     display: block;
-    font-size: 0.9rem;
+    font-size: 0.92rem;
     font-weight: 600;
     color: var(--bark-dark);
-    margin-bottom: 4px;
+    margin-bottom: 5px;
   }
 
   .feature__desc {
     font-size: 0.82rem;
     color: var(--text-muted);
     line-height: 1.5;
+    margin: 0;
   }
 
   .about__carousel-wrap {
@@ -348,3 +395,4 @@ const carouselPhotos = [
   prevButton?.addEventListener('click', () => scrollCarousel(-1));
   nextButton?.addEventListener('click', () => scrollCarousel(1));
 </script>
+```
