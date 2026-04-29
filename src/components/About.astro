@@ -5,33 +5,48 @@ const features = [
   { icon: '📸', title: 'Cute Updates', desc: 'Expect lots of photos (probably more than you need).' },
   { icon: '🌿', title: 'Flexible Walks', desc: 'From quick strolls to longer adventures, we tailor every walk.' },
 ];
+
+const carouselPhotos = [
+  { src: '/in-good-paws/Annie.png', alt: 'Dog walk' },
+  { src: '/in-good-paws/IMG_2623.jpg', alt: 'Dog walk' },
+  { src: '/in-good-paws/IMG_2619.jpg', alt: 'Dog Walk' },
+  { src: '/in-good-paws/imagedogs2', alt: 'Group walk' },
+  { src: '/in-good-paws/IMG_2618.jpg', alt: 'Group walk' },
+  { src: '/in-good-paws/IMG_2621.jpg', alt: 'Beach walk' },
+  { src: '/in-good-paws/IMG_20200823_115650.jpg', alt: 'House visits' },
+];
 ---
 
 <section class="about" id="about">
   <div class="container about__inner">
     <div class="about__content">
       <span class="section-tag">About Us</span>
-      <h2 class="section-title">We treat every dog<br/><em>like our own</em></h2>
+
+      <h2 class="section-title">
+        We treat every dog<br />
+        <em>like our own</em>
+      </h2>
+
       <p class="about__lead">
         In Good Paws was started by two best friends who met when they were 10 years old and have been inseparable ever since.
       </p>
-      
+
       <p class="about__body">
-        After working together in marketing, we decided to build something that combined our skills with what we love most... dogs! Founded on one simple belief: every dog deserves 
-  attentive, joyful care — whether it's a quick lunchtime walk or a whole week of sitting.
-      
+        After working together in marketing, we decided to build something that combined our skills with what we love most... dogs! Founded on one simple belief: every dog deserves
+        attentive, joyful care, whether it's a quick lunchtime walk or a whole week of sitting.
+
         <br /><br />
-      
+
         That’s how In Good Paws was born.
-      
+
         <br /><br />
-      
-        We believe every dog deserves safe, fun, and loving walks, whether it’s a quick neighbourhood stroll or a longer adventure. 
-        We treat every pup like part of our own pack, because that’s exactly what they become to us. We're real people who genuinely love dogs, 
-  and we'll promise to send you more photos of your doggies than you probably need.
-      
+
+        We believe every dog deserves safe, fun, and loving walks, whether it’s a quick neighbourhood stroll or a longer adventure.
+        We treat every pup like part of our own pack, because that’s exactly what they become to us. We're real people who genuinely love dogs,
+        and we'll promise to send you more photos of your doggies than you probably need.
+
         <br /><br />
-      
+
         – Emma & Grace 🐾
       </p>
 
@@ -48,71 +63,56 @@ const features = [
       </div>
     </div>
   </div>
+
+  <div class="about__carousel-wrap">
+    <div class="container">
+      <div class="about__carousel-heading">
+        <span class="section-tag">Our Little Pack</span>
+        <h3>Some of the furry friends we’ve made along the way</h3>
+      </div>
+
+      <div class="photo-carousel" aria-label="Dog photo carousel">
+        <button class="carousel-btn carousel-btn--prev" type="button" aria-label="Previous photo">
+          ‹
+        </button>
+
+        <div class="photo-carousel__track">
+          {carouselPhotos.map(photo => (
+            <div class="photo-carousel__slide">
+              <img src={photo.src} alt={photo.alt} loading="lazy" />
+            </div>
+          ))}
+        </div>
+
+        <button class="carousel-btn carousel-btn--next" type="button" aria-label="Next photo">
+          ›
+        </button>
+      </div>
+    </div>
+  </div>
 </section>
 
 <style>
   .about {
     padding: 100px 0;
     background: var(--cream);
+    overflow: hidden;
   }
 
   .about__inner {
-  display: block;
-  max-width: 700px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-  .about__visual {
-    position: relative;
-  }
-
-  .about__image-wrap {
-    position: relative;
-  }
-
-  .about__img-placeholder {
-    border-radius: var(--radius-lg);
-    overflow: hidden;
-    box-shadow: var(--shadow-md);
-  }
-
-  .about__img-placeholder svg {
-    width: 100%;
-    height: auto;
-  }
-
-  .about__years {
-    position: absolute;
-    bottom: -16px;
-    right: -16px;
-    background: var(--moss);
-    color: white;
-    padding: 20px 24px;
-    border-radius: var(--radius-md);
-    text-align: center;
-    box-shadow: var(--shadow-md);
-  }
-
-  .about__years strong {
     display: block;
-    font-family: var(--font-display);
-    font-size: 2.2rem;
-    line-height: 1;
-  }
-
-  .about__years span {
-    font-size: 0.8rem;
-    opacity: 0.85;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
   }
 
   .about__content .section-tag {
     margin-bottom: 16px;
   }
 
-.about__content .section-title {
-  text-align: center;
-}
+  .about__content .section-title {
+    text-align: center;
+  }
 
   .about__lead {
     font-size: 1.05rem;
@@ -138,6 +138,7 @@ const features = [
     display: flex;
     gap: 14px;
     align-items: flex-start;
+    text-align: left;
   }
 
   .feature__icon {
@@ -160,14 +161,185 @@ const features = [
     line-height: 1.5;
   }
 
+  .about__carousel-wrap {
+    margin-top: 76px;
+  }
+
+  .about__carousel-heading {
+    text-align: center;
+    margin-bottom: 28px;
+  }
+
+  .about__carousel-heading .section-tag {
+    margin-bottom: 12px;
+  }
+
+  .about__carousel-heading h3 {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.1;
+    color: var(--bark-dark);
+    margin: 0;
+  }
+
+  .photo-carousel {
+    position: relative;
+  }
+
+  .photo-carousel__track {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(260px, 34%);
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding: 8px 4px 18px;
+    scrollbar-width: none;
+  }
+
+  .photo-carousel__track::-webkit-scrollbar {
+    display: none;
+  }
+
+  .photo-carousel__slide {
+    height: 390px;
+    scroll-snap-align: center;
+    background: var(--warm-white);
+    padding: 10px;
+    border: 2px solid var(--sand);
+    border-radius: 30px;
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+  }
+
+  .photo-carousel__slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 22px;
+    display: block;
+  }
+
+  .carousel-btn {
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    width: 46px;
+    height: 46px;
+    border: 0;
+    border-radius: 50%;
+    background: var(--bark);
+    color: var(--cream);
+    font-size: 2rem;
+    line-height: 1;
+    cursor: pointer;
+    transform: translateY(-50%);
+    box-shadow: var(--shadow-md);
+    transition: transform 0.2s, background 0.2s;
+  }
+
+  .carousel-btn:hover {
+    background: var(--bark-dark);
+    transform: translateY(-50%) scale(1.05);
+  }
+
+  .carousel-btn--prev {
+    left: -18px;
+  }
+
+  .carousel-btn--next {
+    right: -18px;
+  }
+
   @media (max-width: 900px) {
+    .about {
+      padding: 84px 0;
+    }
+
     .about__inner {
       grid-template-columns: 1fr;
       gap: 48px;
     }
 
-    .about__content .section-title { text-align: center; }
-    .about__lead, .about__body { text-align: center; }
-    .about__features { grid-template-columns: 1fr; }
+    .about__content .section-title,
+    .about__lead,
+    .about__body {
+      text-align: center;
+    }
+
+    .about__features {
+      grid-template-columns: 1fr;
+    }
+
+    .photo-carousel__track {
+      grid-auto-columns: minmax(250px, 72%);
+    }
+
+    .photo-carousel__slide {
+      height: 340px;
+    }
+
+    .carousel-btn--prev {
+      left: 8px;
+    }
+
+    .carousel-btn--next {
+      right: 8px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .about {
+      padding: 72px 0;
+    }
+
+    .about__carousel-wrap {
+      margin-top: 58px;
+    }
+
+    .photo-carousel__track {
+      grid-auto-columns: 86%;
+      gap: 16px;
+      padding-bottom: 14px;
+    }
+
+    .photo-carousel__slide {
+      height: 320px;
+      border-radius: 26px;
+    }
+
+    .photo-carousel__slide img {
+      border-radius: 18px;
+    }
+
+    .carousel-btn {
+      width: 40px;
+      height: 40px;
+      font-size: 1.7rem;
+    }
   }
 </style>
+
+<script>
+  const carousel = document.querySelector('.photo-carousel');
+  const track = carousel?.querySelector('.photo-carousel__track');
+  const prevButton = carousel?.querySelector('.carousel-btn--prev');
+  const nextButton = carousel?.querySelector('.carousel-btn--next');
+
+  const scrollCarousel = direction => {
+    if (!track) return;
+
+    const slide = track.querySelector('.photo-carousel__slide');
+    const slideWidth = slide ? slide.getBoundingClientRect().width : 320;
+    const gap = 20;
+
+    track.scrollBy({
+      left: direction * (slideWidth + gap),
+      behavior: 'smooth',
+    });
+  };
+
+  prevButton?.addEventListener('click', () => scrollCarousel(-1));
+  nextButton?.addEventListener('click', () => scrollCarousel(1));
+</script>
