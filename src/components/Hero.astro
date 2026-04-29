@@ -25,16 +25,15 @@
 
     <div class="hero__photos">
   <div class="hero__photo-card hero__photo-card--tilt-left">
-    <img src="/in-good-paws/IMG_7484.jpg" alt="Emma with a dog" />
+    <img src="/in-good-paws/IMG_7484.jpg" alt="Emma with a dog" loading="eager" fetchpriority="high" /> />
   </div>
 
   <div class="hero__photo-card hero__photo-card--main">
-    <img src="/in-good-paws/annieham.png" alt="Two dogs together" />
+    <img src="/in-good-paws/annieham.png" alt="Two dogs together" loading="eager" fetchpriority="high" /> />
   </div>
 
   <div class="hero__photo-card hero__photo-card--tilt-right">
-<img src="/in-good-paws/IMG_1514%202.JPG" alt="Grace with a dog" />  </div>
-</div>
+<img class="photo-grace" src="/in-good-paws/IMG_1514%202.JPG" alt="Grace with a dog" loading="eager" fetchpriority="high" /></div>
 </div>
 
   <div class="hero__scroll">
@@ -74,6 +73,9 @@
   object-fit: cover;
   border-radius: 24px;
 }
+.photo-grace {
+  object-position: left center;
+}
 
 /* middle image bigger */
 .hero__photo-card--main {
@@ -108,8 +110,16 @@
 
 @media (max-width: 600px) {
   .hero__photos {
-    flex-direction: column;
+    grid-template-columns: 1fr;
   }
+
+  .hero__photo-card,
+  .hero__photo-card--main {
+    width: 100%;
+    height: 320px;
+    transform: none;
+  }
+}
 
   .hero__photo-card,
   .hero__photo-card--main {
