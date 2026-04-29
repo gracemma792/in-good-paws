@@ -32,7 +32,7 @@ const services = [
     icon: '🌙',
     title: 'Pet Sitting',
     desc: 'Overnight or extended care in your home while you travel. We keep your dog comfortable in their own space.',
-    price: '$60 per night | Contact us',
+    price: '$90 per night | Contact us',
     highlight: false,
   },
 ];
@@ -49,7 +49,7 @@ const services = [
       </h2>
 
       <p class="section-subtitle">
-        Simple, thoughtful care tailored to each dog — whether it’s a quick walk or a full day of company.
+        Simple, thoughtful care tailored to each dog — whether it's a quick walk or a full day of company.
       </p>
     </div>
 
@@ -70,7 +70,7 @@ const services = [
 
     <div class="services__note">
       <span>🐾</span>
-      <p>Fill out an enquiry and we’ll get back to you within 24 hours to organise what you need.</p>
+      <p>Fill out an enquiry and we'll get back to you within 24 hours to organise what you need.</p>
     </div>
   </div>
 </section>
@@ -78,7 +78,7 @@ const services = [
 <style>
   .services {
     padding: 100px 0;
-    background: var(--warm-white);
+    background: #fff7f4;
   }
 
   .section-header {
@@ -88,7 +88,7 @@ const services = [
 
   .section-tag {
     display: inline-block;
-    background: var(--moss-light);
+    background: #e6a18f;
     color: white;
     font-size: 0.75rem;
     font-weight: 600;
@@ -109,7 +109,7 @@ const services = [
   }
 
   .section-title em {
-    color: var(--moss);
+    color: #d78470;
     font-style: italic;
   }
 
@@ -129,10 +129,11 @@ const services = [
 
   .service-card {
     grid-column: span 2;
-    background: var(--cream);
-    border: 2px solid var(--sand);
+    background: #fffaf8;
+    border: 2px solid #f4c9ba;
     border-radius: var(--radius-md);
     padding: 32px 28px;
+    box-shadow: 0 14px 34px rgba(92, 72, 58, 0.06);
     transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
   }
 
@@ -143,8 +144,8 @@ const services = [
 
   .service-card:hover {
     transform: translateY(-4px);
-    box-shadow: var(--shadow-md);
-    border-color: var(--bark);
+    box-shadow: 0 18px 42px rgba(92, 72, 58, 0.12);
+    border-color: #e6a18f;
   }
 
   .service-card--highlight {
@@ -158,7 +159,7 @@ const services = [
   }
 
   .service-card--highlight .service-card__price {
-    color: #f5c842;
+    color: #f4bfa8;
   }
 
   .service-card--highlight .service-card__link {
@@ -197,7 +198,7 @@ const services = [
     justify-content: space-between;
     gap: 16px;
     padding-top: 16px;
-    border-top: 1px solid var(--sand);
+    border-top: 1px solid #f4c9ba;
   }
 
   .service-card--highlight .service-card__footer {
@@ -208,16 +209,16 @@ const services = [
     font-family: var(--font-display);
     font-size: 1.1rem;
     font-weight: 700;
-    color: var(--moss);
+    color: #d78470;
   }
 
   .service-card__link {
     flex-shrink: 0;
     font-size: 0.85rem;
     font-weight: 500;
-    color: var(--bark);
+    color: var(--bark-dark);
     padding: 6px 14px;
-    border: 1.5px solid var(--sand);
+    border: 1.5px solid #f4c9ba;
     border-radius: var(--radius-pill);
     transition: all 0.2s;
     text-decoration: none;
@@ -234,7 +235,8 @@ const services = [
     align-items: center;
     justify-content: center;
     gap: 12px;
-    background: var(--sand);
+    background: #f7ddd4;
+    border: 1px solid #f4c9ba;
     border-radius: var(--radius-md);
     padding: 20px 32px;
     font-size: 0.95rem;
@@ -283,4 +285,3 @@ const services = [
     }
   }
 </style>
-```
