@@ -8,37 +8,30 @@
         <span class="section-tag">Get In Touch</span>
         <h2 class="section-title">Ready for your<br/><em>pup's best walks?</em></h2>
         <p class="contact__desc">
-          Drop us a message and we'll get back to you within a few hours. 
-          All new clients get a free meet & greet before their first booking.
-        </p>
+  Fill out the form and we’ll get back to you within 24 hours. 🐾  
+  We service Five Dock, Wareemba, and surrounding areas.
+</p>
 
         <div class="contact__details">
-          <a href="tel:+610400000000" class="contact__item">
-            <span class="contact__item-icon">📞</span>
-            <div>
-              <strong>Give us a call</strong>
-              <p>0400 000 000</p>
-            </div>
-          </a>
-          <a href="mailto:hello@ingoodpaws.com.au" class="contact__item">
+          <a href="mailto:ingoodpaws1@gmail.com" class="contact__item">
             <span class="contact__item-icon">✉️</span>
             <div>
               <strong>Email us</strong>
-              <p>hello@ingoodpaws.com.au</p>
+              <p>ingoodpaws1@gmail.com</p>
             </div>
           </a>
           <div class="contact__item">
             <span class="contact__item-icon">📍</span>
             <div>
               <strong>Service area</strong>
-              <p>Inner Sydney & surrounds</p>
+              <p>Five Dock, Wareemba & surrounds!</p>
             </div>
           </div>
           <div class="contact__item">
             <span class="contact__item-icon">🕐</span>
             <div>
               <strong>Hours</strong>
-              <p>Mon–Sun, 7am – 7pm</p>
+              <p>Mon–Fri, 8am – 5pm<br/>Weekends for long care</p>
             </div>
           </div>
         </div>
@@ -54,8 +47,11 @@
       </div>
 
       <div class="contact__form-wrap">
-        <form class="contact__form" id="contactForm" novalidate>
-          <h3 class="form__title">Book a free meet & greet</h3>
+        <form class="contact__form" id="contactForm" action="https://formsubmit.co/ingoodpaws1@gmail.com" method="POST">
+<input type="hidden" name="_subject" value="New enquiry from In Good Paws website" />
+<input type="hidden" name="_captcha" value="false" />
+<input type="hidden" name="_template" value="table" />
+          <h3 class="form__title">Send an enquiry 🐾</h3>
 
           <div class="form__row">
             <div class="form__field">
@@ -93,7 +89,7 @@
               <option>Group Walk</option>
               <option>Drop-In Visit</option>
               <option>Overnight Sitting</option>
-              <option>Puppy Package</option>
+              <option>Day Sitting</option>
               <option>Holiday Care</option>
             </select>
           </div>
@@ -289,17 +285,3 @@
     .contact__form-wrap { padding: 24px; }
   }
 </style>
-
-<script>
-  const form = document.getElementById('contactForm') as HTMLFormElement;
-  form?.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const btn = form.querySelector('.form__submit') as HTMLButtonElement;
-    const text = form.querySelector('.submit__text') as HTMLElement;
-    const success = form.querySelector('.submit__success') as HTMLElement;
-    btn.disabled = true;
-    text.hidden = true;
-    success.hidden = false;
-    btn.style.background = '#4A6741';
-  });
-</script>
