@@ -49,31 +49,32 @@
     position: relative;
     overflow: hidden;
     padding: 150px 0 90px;
+    background: #fff3ef;
   }
 
   .hero__blob {
     position: absolute;
     border-radius: 50%;
     filter: blur(80px);
-    opacity: 0.35;
+    opacity: 0.5;
     pointer-events: none;
     z-index: 0;
   }
 
   .hero__blob--1 {
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, #c8dde8, transparent);
-    top: -200px;
-    right: -200px;
+    width: 620px;
+    height: 620px;
+    background: radial-gradient(circle, #f4bfa8, transparent 68%);
+    top: -220px;
+    right: -190px;
   }
 
   .hero__blob--2 {
-    width: 400px;
-    height: 400px;
-    background: radial-gradient(circle, #e8ddd0, transparent);
-    bottom: -100px;
-    left: -100px;
+    width: 430px;
+    height: 430px;
+    background: radial-gradient(circle, #f7ddd4, transparent 70%);
+    bottom: -120px;
+    left: -110px;
   }
 
   .hero__inner {
@@ -87,11 +88,12 @@
 
   .hero__badge {
     display: inline-flex;
-    background: var(--sand);
+    background: #f7ddd4;
     color: var(--bark-dark);
     font-size: 0.85rem;
     font-weight: 500;
     padding: 8px 18px;
+    border: 1px solid rgba(92, 72, 58, 0.08);
     border-radius: var(--radius-pill);
     margin-bottom: 28px;
   }
@@ -106,7 +108,7 @@
   }
 
   .hero__title em {
-    color: var(--moss);
+    color: #d78470;
     font-style: italic;
   }
 
@@ -147,12 +149,13 @@
   }
 
   .btn--ghost {
-    border: 2px solid var(--sand);
-    color: var(--text);
+    border: 2px solid #f4c9ba;
+    color: var(--bark-dark);
+    background: rgba(255, 255, 255, 0.38);
   }
 
   .btn--ghost:hover {
-    background: var(--sand);
+    background: #f7ddd4;
     transform: translateY(-2px);
   }
 
@@ -165,11 +168,11 @@
 
   .hero__photo-card {
     height: 360px;
-    background: var(--warm-white);
+    background: rgba(255, 255, 255, 0.72);
     padding: 10px;
     border-radius: 30px;
-    box-shadow: var(--shadow-md);
-    border: 2px solid var(--sand);
+    box-shadow: 0 18px 42px rgba(92, 72, 58, 0.12);
+    border: 2px solid #f4c9ba;
     overflow: hidden;
   }
 
