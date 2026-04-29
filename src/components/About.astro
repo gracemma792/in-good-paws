@@ -37,21 +37,21 @@ const carouselPhotos = [
 
         <br /><br />
 
-        That’s how In Good Paws was born.
+        That's how In Good Paws was born.
 
         <br /><br />
 
-        We believe every dog deserves safe, fun, and loving walks, whether it’s a quick neighbourhood stroll or a longer adventure.
-        We treat every pup like part of our own pack, because that’s exactly what they become to us. We're real people who genuinely love dogs,
+        We believe every dog deserves safe, fun, and loving walks, whether it's a quick neighbourhood stroll or a longer adventure.
+        We treat every pup like part of our own pack, because that's exactly what they become to us. We're real people who genuinely love dogs,
         and we'll promise to send you more photos of your doggies than you probably need.
 
         <br /><br />
 
-        – Emma & Grace 🐾
+        - Emma & Grace 🐾
       </p>
 
       <div class="about__features">
-        {features.map(f => (
+        {features.map((f) => (
           <div class="feature">
             <div class="feature__icon">{f.icon}</div>
             <div>
@@ -67,7 +67,7 @@ const carouselPhotos = [
   <div class="about__carousel-wrap">
     <div class="container">
       <div class="about__carousel-heading">
-        <h3>Some of the furry friends we’ve made along the way</h3>
+        <h3>Some of the furry friends we've made along the way</h3>
       </div>
 
       <div class="photo-carousel" aria-label="Dog photo carousel">
@@ -76,7 +76,7 @@ const carouselPhotos = [
         </button>
 
         <div class="photo-carousel__track">
-          {carouselPhotos.map(photo => (
+          {carouselPhotos.map((photo) => (
             <div class="photo-carousel__slide">
               <img src={photo.src} alt={photo.alt} loading="lazy" />
             </div>
@@ -135,7 +135,6 @@ const carouselPhotos = [
   }
 
   .feature {
-    position: relative;
     display: flex;
     gap: 14px;
     align-items: flex-start;
@@ -144,10 +143,7 @@ const carouselPhotos = [
     border-radius: 28px;
     border: 1.5px solid rgba(92, 72, 58, 0.08);
     box-shadow: 0 14px 34px rgba(92, 72, 58, 0.08);
-    transition:
-      transform 0.22s ease,
-      box-shadow 0.22s ease,
-      border-color 0.22s ease;
+    transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
   }
 
   .feature:nth-child(1) {
@@ -182,7 +178,6 @@ const carouselPhotos = [
     width: 38px;
     height: 38px;
     flex-shrink: 0;
-    margin-top: 0;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.58);
     font-size: 1.25rem;
@@ -213,12 +208,6 @@ const carouselPhotos = [
   .about__carousel-heading {
     text-align: center;
     margin-bottom: 28px;
-  }
-
-  .about__carousel-heading .section-tag {
-    margin-bottom: 12px;
-    background: rgba(255, 255, 255, 0.55);
-    color: var(--bark-dark);
   }
 
   .about__carousel-heading h3 {
@@ -305,17 +294,6 @@ const carouselPhotos = [
       padding-top: 84px;
     }
 
-    .about__inner {
-      grid-template-columns: 1fr;
-      gap: 48px;
-    }
-
-    .about__content .section-title,
-    .about__lead,
-    .about__body {
-      text-align: center;
-    }
-
     .about__features {
       grid-template-columns: 1fr;
     }
@@ -376,15 +354,14 @@ const carouselPhotos = [
   const prevButton = carousel?.querySelector('.carousel-btn--prev');
   const nextButton = carousel?.querySelector('.carousel-btn--next');
 
-  const scrollCarousel = direction => {
+  const scrollCarousel = (direction) => {
     if (!track) return;
 
     const slide = track.querySelector('.photo-carousel__slide');
     const slideWidth = slide ? slide.getBoundingClientRect().width : 320;
-    const gap = 20;
 
     track.scrollBy({
-      left: direction * (slideWidth + gap),
+      left: direction * (slideWidth + 20),
       behavior: 'smooth',
     });
   };
@@ -392,4 +369,3 @@ const carouselPhotos = [
   prevButton?.addEventListener('click', () => scrollCarousel(-1));
   nextButton?.addEventListener('click', () => scrollCarousel(1));
 </script>
-```
