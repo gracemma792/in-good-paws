@@ -287,7 +287,7 @@
   .form__submit {
     width: 100%;
     padding: 15px;
-    background: var(--moss);
+    background: #e6a18f;
     color: white;
     border: none;
     border-radius: var(--radius-pill);
@@ -295,13 +295,15 @@
     font-size: 1rem;
     font-weight: 500;
     cursor: pointer;
-    transition: background 0.2s, transform 0.2s;
+    transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
     margin-top: 8px;
+    box-shadow: 0 10px 24px rgba(230, 161, 143, 0.28);
   }
 
   .form__submit:hover {
-    background: var(--bark);
+    background: #d78470;
     transform: translateY(-2px);
+    box-shadow: 0 14px 30px rgba(215, 132, 112, 0.34);
   }
 
   @media (max-width: 900px) {
