@@ -1,3 +1,5 @@
+```astro
+---
 ---
 
 <section class="contact" id="contact">
@@ -12,7 +14,7 @@
         </h2>
 
         <p class="contact__desc">
-          Fill out the form and we’ll get back to you within 24 hours. 🐾
+          Fill out the form and we'll get back to you within 24 hours. 🐾
           We service Five Dock, Wareemba, and surrounding areas.
         </p>
 
@@ -29,7 +31,7 @@
             <span class="contact__item-icon">📍</span>
             <div>
               <strong>Service area</strong>
-              <p>Five Dock, Wareemba & surrounds!</p>
+              <p>Five Dock, Wareemba &amp; surrounds!</p>
             </div>
           </div>
 
@@ -37,7 +39,7 @@
             <span class="contact__item-icon">🕐</span>
             <div>
               <strong>Hours</strong>
-              <p>Mon–Fri, 8am – 5pm<br />Weekends for long care</p>
+              <p>Mon-Fri, 8am - 5pm<br />Weekends for long care</p>
             </div>
           </div>
         </div>
@@ -94,11 +96,11 @@
             <label for="service">Service interested in</label>
             <select id="service" name="service">
               <option value="">Select a service...</option>
-              <option>Private Walk</option>
-              <option>Group Walk</option>
-              <option>Day Sitting</option>
-              <option>Drop-In Visit</option>
-              <option>Pet Sitting</option>
+              <option value="Private Walk">Private Walk</option>
+              <option value="Group Walk">Group Walk</option>
+              <option value="Day Sitting">Day Sitting</option>
+              <option value="Drop-In Visit">Drop-In Visit</option>
+              <option value="Pet Sitting">Pet Sitting</option>
             </select>
           </div>
 
@@ -106,11 +108,11 @@
             <label for="duration">How long do you need care for?</label>
             <select id="duration" name="duration">
               <option value="">Select a duration...</option>
-              <option>30 mins</option>
-              <option>60 mins</option>
-              <option>Half day</option>
-              <option>Full day</option>
-              <option>1+ days</option>
+              <option value="30 mins">30 mins</option>
+              <option value="60 mins">60 mins</option>
+              <option value="Half day">Half day</option>
+              <option value="Full day">Full day</option>
+              <option value="1+ days">1+ days</option>
             </select>
           </div>
 
@@ -121,7 +123,7 @@
 
           <button type="submit" class="form__submit">
             <span class="submit__text">Send Enquiry 🐾</span>
-            <span class="submit__success" hidden>Sent! We'll be in touch soon ✨</span>
+            <span class="submit__success" hidden>Sent! We'll be in touch soon</span>
           </button>
         </form>
       </div>
