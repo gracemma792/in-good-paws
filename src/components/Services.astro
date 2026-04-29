@@ -2,44 +2,37 @@
 const services = [
   {
     icon: '🦮',
-    title: 'Solo Walks',
-    desc: 'One-on-one 30 or 60 minute walks tailored entirely to your dog. Full attention, personalised routes.',
-    price: 'From $35',
+    title: 'Private Walks',
+    desc: 'One-on-one walks tailored to your dog’s pace and needs. Calm, personal, and fully focused on your pup.',
+    price: '$50 (45 min) · $65 (60 min)',
     highlight: true,
   },
   {
     icon: '🐕‍🦺',
     title: 'Group Walks',
-    desc: 'Socialise your pup with up to 4 dogs on a fun group outing. Great for social butterflies.',
-    price: 'From $22',
+    desc: 'Social walks with a small group of friendly dogs. We walk up to 6 dogs together (3 each) for a safe, fun experience.',
+    price: '$45 · +$30 second dog',
     highlight: false,
   },
   {
     icon: '🏡',
+    title: 'Day Sitting',
+    desc: 'Care in your home while you’re out for the day. Perfect for dogs who need company, attention, or routine.',
+    price: 'Contact us',
+    highlight: false,
+  },
+  {
+    icon: '🐾',
     title: 'Drop-In Visits',
-    desc: '30-minute home check-ins for feeding, play, and some love when you\'re at work.',
-    price: 'From $28',
+    desc: 'Feeding, playtime, and check-ins while you’re out. Great for busy days or quick visits.',
+    price: '$40 (30 min) · $75 (60 min)',
     highlight: false,
   },
   {
     icon: '🌙',
-    title: 'Overnight Sitting',
-    desc: 'We stay at your home so your dog sleeps in their own bed, happy and comfortable.',
-    price: 'From $85',
-    highlight: false,
-  },
-  {
-    icon: '🎒',
-    title: 'Puppy Package',
-    desc: 'Lunchtime visits + afternoon walks for pups who need extra attention and toilet breaks.',
-    price: 'From $50',
-    highlight: false,
-  },
-  {
-    icon: '✈️',
-    title: 'Holiday Care',
-    desc: 'Extended pet-sitting while you travel. Full daily updates with photos and videos.',
-    price: 'From $65 /day',
+    title: 'Pet Sitting',
+    desc: 'Overnight or extended care in your home while you travel. We keep your dog comfortable in their own space.',
+    price: 'Contact us for travel dates',
     highlight: false,
   },
 ];
@@ -49,8 +42,10 @@ const services = [
   <div class="container">
     <div class="section-header">
       <span class="section-tag">What We Offer</span>
-      <h2 class="section-title">Services built around<br/><em>your dog's needs</em></h2>
-      <p class="section-subtitle">Every service comes with real-time GPS updates, photo reports, and our signature care.</p>
+      <h2 class="section-title">Walks & Care<br/><em>your dog's needs</em></h2>
+      <p class="section-subtitle">
+  Simple, thoughtful care tailored to each dog — whether it’s a quick walk or a full day of company.
+</p>
     </div>
 
     <div class="services__grid">
@@ -69,8 +64,7 @@ const services = [
 
     <div class="services__note">
       <span>🐾</span>
-      <p>All services include a free meet & greet before your first booking. No lock-in contracts.</p>
-    </div>
+      <p>Fill out an enquiry and we’ll get back to you within 24 hours to organise what you need.</p>
   </div>
 </section>
 
